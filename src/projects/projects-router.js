@@ -11,9 +11,9 @@ const serializeProject = project => ({
   name: xss(project.name),
   description: xss(project.description),
   features: xss(project.features),
-  users: xss(project.users),
   author: xss(project.author),
-  date_created: user.date_created
+  topic: xss(project.topic),
+  date_created: project.date_created
 })
 
 projectsRouter
@@ -27,8 +27,8 @@ projectsRouter
       .catch(next)
   })
   .post(jsonParser, (req, res, next) => {
-    const { name, description, features, users, author, date_created  } = req.body
-    const newProject = { name, description,  date_created  }
+    const { name, description, features, topic, author, date_created  } = req.body
+    const newProject = { name, description   }
 
     for (const [key, value] of Object.entries(newProject)) {
       if (value == null) {
@@ -39,8 +39,9 @@ projectsRouter
     }
 
     newProject.features = features;
-    newProject.users = users;
+    newProject.topic = topic;
     newProject.author = author;
+    newProject.date_created = date_created;
 
     ProjectsService.insertProject(
       req.app.get('db'),
@@ -88,8 +89,8 @@ projectsRouter
   })
 
   .patch(jsonParser, (req, res, next) => {
-    const { name, description, date_created } = req.body
-    const projectToUpdate = { name, description, date_created }
+    const { name, description } = req.body
+    const projectToUpdate = { name, description }
 
     const numberOfValues = Object.values(projectToUpdate).filter(Boolean).length
     if (numberOfValues === 0)
