@@ -1,0 +1,3 @@
+ALTER TABLE projects DROP COLUMN IF EXISTS topic;
+
+DROP TYPE IF EXISTS project_topic;
