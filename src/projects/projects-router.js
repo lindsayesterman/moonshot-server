@@ -78,7 +78,7 @@ projectsRouter
     res.json(serializeProject(res.project))
   })
   .delete((req, res, next) => {
-    ProjetsService.deleteProject(
+    ProjectsService.deleteProject(
       req.app.get('db'),
       req.params.project_id
     )
