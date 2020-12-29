@@ -1,12 +1,12 @@
 CREATE TYPE project_topic AS ENUM (
-    'Academic',
-    'Athletics',
-    'Art/Music',
-    'Community Service',
-    'Computer/Technology',
-    'Social Justice',
-    'Work',
-    'Other'
+    'academic',
+    'athletics',
+    'art',
+    'community',
+    'tech',
+    'social',
+    'work',
+    'other'
 );
 
 ALTER TABLE projects
