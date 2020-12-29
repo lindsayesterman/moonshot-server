@@ -5,6 +5,7 @@ const cors = require('cors')
 const helmet = require('helmet')
 const { NODE_ENV } = require('./config')
 const projectsRouter = require("./projects/projects-router")
+const { getByName } = require('./projects/projects-service')
 const app = express()
 
 const morganOption = (NODE_ENV === 'production')
@@ -19,6 +20,7 @@ app.use("/api/projects", projectsRouter)
 app.get('/', (req, res) => {
     res.send('Hello, world!')
 })
+
 
 app.use(function errorHandler(error, req, res, next) {
     let response

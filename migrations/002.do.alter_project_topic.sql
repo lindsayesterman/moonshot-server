@@ -1,13 +1,9 @@
 CREATE TYPE project_topic AS ENUM (
     'Academic',
     'Athletics',
-    'Art',
+    'Art/Music',
     'Community Service',
     'Computer/Technology',
-    'Culture',
-    'Environmental',
-    'Music',
-    'Science/Math',
     'Social Justice',
     'Work',
     'Other'

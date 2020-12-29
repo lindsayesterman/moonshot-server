@@ -74,9 +74,11 @@ projectsRouter
       })
       .catch(next)
   })
+
   .get((req, res, next) => {
     res.json(serializeProject(res.project))
   })
+
   .delete((req, res, next) => {
     ProjectsService.deleteProject(
       req.app.get('db'),
