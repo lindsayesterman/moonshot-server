@@ -12,7 +12,7 @@ This API allows users to obtain and post projects for new devs to work on. It su
 
 There is no authorization required for this app.
 
-## req POST format
+## Post request
 
 Submit a project POST request as a JSON object:
 
@@ -46,8 +46,6 @@ Submit a project POST request as a JSON object:
 | Name       | Type | In   |
 |------------|------|------|
 | project_id | int  | path |
-|            |      |      |
-|            |      |      |
 
 
 ## Status Codes
