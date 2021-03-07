@@ -4,13 +4,17 @@ Check out the client repo here: https://github.com/lindsayesterman/project-finde
 
 Check out the live site here: https://project-finder.vercel.app/
 
+## Summary
+
+This API allows users to obtain and post projects for new devs to work on. It supports GET, POST, DELETE, and PATCH requests.
+
 ## Authorization
 
 There is no authorization required for this app.
 
-## Requests
+## JSON POST REQ
 
-Submit a club POST request in this format:
+Submit a project POST request in this format:
 
 ```javascript
 {
@@ -26,16 +30,21 @@ Submit a club POST request in this format:
 
 ## Endpoints
 
-* Show all clubs : `GET /api/clubs/`
-* Post a club : `POST /api/clubs/`
-* Delete a club : `DELETE /api/clubs/:club_id/`
-* Modify a club : `PATCH /api/clubs/:club_id/`
-* Get specific club : `GET /api/clubs/:club_id`
+* getAllProjects 
+    - returns all projects : `GET /api/projects/`
+* insertProject
+    - posts a new project : `POST /api/projects/`
+* deleteProject
+    - deletes a specified project : `DELETE /api/projects/:project_id/`
+* updateProject
+    - modifies a specified project : `PATCH /api/projects/:project_id/`
+* getById
+    - gets a specified project : `GET /api/projects/:project_id`
 
 
 ## Status Codes
 
-Gophish returns the following status codes in its API:
+Project Finder returns the following status codes in its API:
 
 | Status Code | Description |
 | :--- | :--- |
