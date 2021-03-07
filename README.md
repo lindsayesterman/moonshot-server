@@ -12,9 +12,9 @@ This API allows users to obtain and post projects for new devs to work on. It su
 
 There is no authorization required for this app.
 
-## JSON POST REQ
+## req POST format
 
-Submit a project POST request in this format:
+Submit a project POST request as a JSON object:
 
 ```javascript
 {
