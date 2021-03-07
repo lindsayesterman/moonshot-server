@@ -41,6 +41,14 @@ Submit a project POST request as a JSON object:
 * getById
     - gets a specified project : `GET /api/projects/:project_id`
 
+## Paramaters 
+
+| Name       | Type | In   |
+|------------|------|------|
+| project_id | int  | path |
+|            |      |      |
+|            |      |      |
+
 
 ## Status Codes
 
