@@ -8,9 +8,9 @@ Check out the live site here: https://project-finder.vercel.app/
 
 There is no authorization required for this app.
 
-## Responses
+## Requests
 
-Many API endpoints return the JSON representation of the resources created or edited. However, if an invalid request is submitted, or some other error occurs, Gophish returns a JSON response in the following format:
+Submit a club POST request in this format:
 
 ```javascript
 {
@@ -23,6 +23,15 @@ Many API endpoints return the JSON representation of the resources created or ed
     "date_created": "now()"
 }
 ```
+
+## Endpoints
+
+* Show all clubs : `GET /api/clubs/`
+* Post a club : `POST /api/clubs/`
+* Delete a club : `DELETE /api/clubs/:club_id/`
+* Modify a club : `PATCH /api/clubs/:club_id/`
+* Get specific club : `GET /api/clubs/:club_id`
+
 
 ## Status Codes
 
